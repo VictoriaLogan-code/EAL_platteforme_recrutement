@@ -1,0 +1,39 @@
+\documentclass{rapport}
+\usepackage{lipsum}
+\title{EAL_StritCrid_rapport} %Titre du fichier
+
+\begin{document}
+
+%----------- Informations du rapport ---------
+
+\logo{logos/logo_heig.png}
+\unif{Éthique et Aspects Légaux}
+\titre{Plateforme de recrutement basée sur l'IA} %Titre du fichier .pdf
+\cours{Rapport} %Nom du cours
+\sujet{-} %Nom du sujet
+
+\enseignant{\textsc{Peña} Carlos} %Nom de l'enseignant
+
+\eleves{\textsc{Akoumba} Ludivine \\
+		\textsc{Bogale} Tegest \\ 
+		\textsc{Ferchichi} Farouk \\ 
+		\textsc{Logan} Victoria \\ 
+		\textsc{Melly} Jérémie } %Nom des élèves
+
+%----------- Initialisation -------------------
+        
+\fairemarges %Afficher les marges
+\fairepagedegarde %Créer la page de garde
+\tabledematieres %Créer la table de matières
+
+%------------ Corps du rapport ----------------
+
+
+\include{sections/1_Introduction.tex}
+\include{sections/2_Description_projet.tex}
+\include{sections/3_Aspects_legaux.tex}
+\include{sections/4_Aspects_ethiques.tex}
+\include{sections/5_Conclusion.tex}
+
+
+\end{document}
