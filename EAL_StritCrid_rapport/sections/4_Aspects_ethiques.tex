@@ -1,19 +1,18 @@
 \section{Aspects éthiques}\label{section:aspects_ethiques}
 
+Les aspects éthiques de ce projet soulèvent plusieurs questions quant au traitement des futur.e.s employé.e.s, à leurs sentiments et les biais inhérents au machine learning.
 
+\subsection{Biais du machine learning}
+Le machine learning sur des CV peut amener à un modèle qui apprend des données biaisées, qui peut provoquer du racisme, du sexisme, ou autres discriminations sociales. En effet, on constate par exemple aujourd'hui que plus d'hommes ont des postes à hautes responsabilités que de femmes, ou encore que plus d'hommes sont dans les secteurs de l'ingénierie, comme plus de femmes sont dans le secteur de la santé pour des métiers tels qu'infirmière, ou encore sage-femme. \newline
 
+Ainsi, il est important que notre modèle entraîné comporte le moins de biais possible pour être éthiquement le plus correct possible. La solution que nous proposons ici est de supprimer au possible les données qui peuvent être à caractère discriminant telles que le sexe du.de la candidat.e et son nom et prénom. On aimerait en effet ainsi éviter qu'un dataset d'entraînement déséquilibré au niveau de ces attributs engendre une discrimination sociale par le modèle.\newline
 
-% --
-https://taleez.com/w/blog/le-parsing-cv-comment-ca-marche-et-pourquoi-lutiliser#title4
---> "Les candidats peuvent avoir le sentiment d’être recrutés à la chaîne, de façon automatisée, sans aucune humanité. L’impact sur la marque employeur est alors non négligeable."
-% --
+Si les biais cités ci-dessus sont correctement évités, on pourra ainsi même espérer avoir moins de discriminations sociales faites par notre modèle de sélection de CV via l'IA que par certain.e.s recruteur.euse.s actuel.le.s.
 
+\subsection{Position du.de la futur.e employé.e}
+Le.la potentiel.le futur.e employé.e se fait ainsi, via ce service que nous proposons, juger par une machine. Ce fait peut entraîner un sentiment de perte d'humanité et peut également distancer la personne de l'entreprise à laquelle iel souhaite postuler, pour même risquer de la discuader de postuler. Le même problème d'éthique se pose d'ailleurs du côté des employé.e.s actuel.le.s, qui pourraient ainsi voir leur entreprise s'écarter de leurs valeurs.\newline
 
-1) Durabilité (impact environnemental du ML) --> Farouk
-2) Machines jugent des être humains 
---> 2.1) Biais qui peuvent être causés + comment "trier" nos données pour qu'elles soient le moins biaisées possible (pas de nom/prénom (culture), pas le sexe (sexisme), etc)
---> 2.2) La position du.de la futur.e employé.e par rapport au jugement automatisé
---> 2.3) Si modèle bien fait (pas ou peu de biais), pas les mêmes biais que les recruteurs => recrutement peut etre plus équitable (pas racisme, sexisme, etc)
+Pour combattre ces sentiments néfaste, nous proposons d'être complètement transparents par rapport au modèle de machine learning que nous utiliserons ; typiquement en faisant signer au.à la CEO un document accessible par tou.te.s attestant le fait que les données pouvant provoquer des biais de sélection - tels que le sexe, nom, prénom comme cités précédemment - ne sont pas prises en compte pour la construction de notre modèle de classification.
 
 
 
