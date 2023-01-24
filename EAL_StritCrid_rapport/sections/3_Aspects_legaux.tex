@@ -21,7 +21,7 @@ Il est important de noter que a liste des PIs ci-dessus est loin d'être exhaust
 \newpage
 
 % Module 2 %
-\subsection{Les brevets}
+\subsection{Les brevets}\label{subsection:les_brevets}
  
 De sa définition informatique, une plateforme désigne un matériel ou un logiciel qui héberge une application ou un service. De ce fait, elle fait partie des exclusions de brevabilité. De plus, pour qu'un service puisse être brevetable, il doit remplir certains critères de brevabilité :\newline
 
@@ -39,18 +39,59 @@ Seulement 1 critère sur 3 de brevetabilité étant respecté, il n'est donc pas
  %Sur le marché suisse, nous avons pu recenser quelques concurrents potentiels. Des entreprises qui proposent un service similaire au nôtre. On cite: \href{https://www.textkernel.com/fr/?utm_term=recrutement%20intelligence%20artificielle&utm_source=adwords&utm_campaign=FR+-+Search+-+Non+Brand&utm_medium=ppc&hsa_mt=p&hsa_src=g&hsa_kw=recrutement%20intelligence%20artificielle&hsa_ad=629928942899&hsa_tgt=kwd-541674329900&hsa_ver=3&hsa_acc=1393423699&hsa_net=adwords&hsa_cam=18670126951&hsa_grp=144320914202&gclid=CjwKCAiA5Y6eBhAbEiwA_2ZWISLyh3zdDh-KHgpPZ955DcROOiNeKEdHtwnNKpShXb0kbDMqB6jNvRoCTYwQAvD_BwE}{textKernel}, \href{https://www.hirevue.com/}{Hirevue} , \href{https://assessment.aon.com/en-us/video-interviewing-solution}{VidAssess} pour ne citer que ceux là. 
 
 % Module 3 %
-\subsection{Protection des logiciesls, autres stratégies de protection}
-% --> Jbstand el bogoss
+\subsection{Protection des logiciels, autres stratégies de protection}
+% --> Jbstand el bogoss -> yup that's mey
 
---> Faut utiliser les licenses pour pytorch, tensorflow, etc, décrire vitaif ces license
+Notre produit/service étant constitué majoritairement de software, la protection par le droit d'auteur.e entre en vigueur dès la création de notre service. Il n'y a pas de formalités à respecter pour obtenir cette protection. En revanche la protection par le droit d'auteur.e est limitée dans le temps. En Suisse, elle est valide jusqu'à 50 ans après la mort de l'auteur.e. Le droit d'auteur.e n'offre pas une protection absolue contre la contrefaçon mais elle nous donne des outils légaux pour nous défendre en cas de litige. \\
 
-- Est-ce que le produit / le service de mon projet comprend du software ? Si cela est le cas, décrire les avantages / inconvénients de sa protection par le droit d’auteur.
+Il est fort probable que, pendant l'implémentation de notre service, nous utilisions des dépendences externes comme :
+ \begin{itemize}
+     \item React
+     \item PyTorch
+     \item Tensorflow
+     \item etc...
+ \end{itemize}
 
-- Si cela est le cas, décrire les avantages / inconvénients de sa protection par un brevet.
+ Ces librairies/frameworks sont disponible en libre service sur internet pour une utilisation dans le cadre privé. Les choses se compliquent lorsque l'on veut utiliser de tels outils à des fins commerciaux. En effet, même si ces dépendences sont librement accessible par tout.e un.e chacun.e, elles sont quand même protégées par des licenses Open Source donc voici quelques exemples : \\
+\begin{itemize}
+     \item \textbf{GNU (GPL):} N'importe quel Software qui utilise une dépendence protégée par cette license doit être publié en Open Source. Ce qui veut dire que l'on doit publier notre code source et céder tous nos droits à la modification et à la distribution de notre code. Cela ne convient pas à un cadre commercial. \\
+     \item \textbf{Apache :} Avec cette license, nous pouvons librement disposer du code. La seule contrainte est de respecter les conditions de la license Apache : \url{https://www.apache.org/licenses/LICENSE-2.0} \\
+     \item \textbf{MIT License :} Une des licences les plus permissives. Nous pouvons disposer librement du code tant que l'on ajoute une copie de la license originale MIT et un copyright. Mais certains dévelopeurs l'évitent car elle ne spécifie pas explicitement les droits de distribution. \\
+ \end{itemize}
 
-- Est-ce que certaines caractéristiques de mon projet pourraient être protégées par les trade secrets ? Si cela est le cas, décrire quelques mesures à mettre en place pour mettre en oeuvre cette protection.
+ Nous devrons donc apporter une attention particulière aux licenses de nos dépencences lors de la conception de notre service. \\
+ 
+Comme dit précédemment (\ref{subsection:les_brevets} Les brevets), notre plateforme, en elle-même, ne remplit pas les critères pour le dépôt d'un brevet. En revanche, elle sera composée de plusieurs éléments qui, individuellement, pourraient être protégés par les trade secrets. \\
 
-- Est-ce que certaines caractéristiques de mon projet pourraient être divulguées via une publication défensive ? Si cela est le cas, décrire les avantages et inconvénients d’une telle stratégie.
+Comme par exemple :
+ \begin{itemize}
+     \item Les algorithmes utilisés dans notre modèle de Machine Learning
+     \item Les méthodes de prétraitement des données
+     \item Les données d'entraînement de notre modèle \\
+ \end{itemize}
+Ces éléments peuvent être considéré comme des secrets commerciaux et donc peuvent être protégés par le droit des secrets d'affaires.
+
+Afin d'assurer la protection de ces trade secrets nous pouvons :
+ \begin{itemize}
+     \item \textbf{Mettre en place des politiques de confidentialité et de sécurité :} Mettre en place des politiques de confidentialité et de sécurité pour protéger les informations confidentielles et garantir que seuls les employés et les partenaires autorisés ont accès aux informations confidentielles. \\
+     \item \textbf{Utiliser des accords de confidentialité :} (Non Disclosure Agreement) Faire signer des accords de confidentialité à tous les employés, partenaires et prestataires de services pour s'assurer qu'ils comprennent leurs obligations en matière de confidentialité et de protection des informations confidentielles et se protéger légalement. \\
+     \item \textbf{Utiliser des technologies de sécurité :} Mettre en place des technologies de sécurité pour protéger les informations confidentielles, comme le chiffrement des données et l'authentification des utilisateurs. \\
+ \end{itemize}
+
+ Si nous trouvons un algorithme de machine learning innovant, une publication défensive pourraient être envisagée. Tout dépendra de l'état du marché au moment de la découverte d'un tel algorithme. En effet, une publication défensive va mettre notre invention dans le domaine public ce qui a plusieurs avantages :
+  \begin{itemize}
+     \item Se protéger contre les autres brevets de tiers.
+     \item Rendre les caractéristiques de l'invention disponible pour l'industrie (ce qui nous importe peu dans notre cas, nous n'essayons pas définir un standard).
+     \item Créer une preuve de l'antériorité pour se défendre en cas de litige. \\
+ \end{itemize}
+ Mais il existe aussi des désavantages :
+   \begin{itemize}
+     \item Révèle au grand jour des informations importantes sur l'invention, qui peuvent par la suite être utilisées par des concurrents.
+     \item Elle peut limiter les options de commercialisation de l'invention.
+     \item Elle peut rendre plus difficile l'obtention d'un brevet étendu dans d'autres pays (ce qui nous importe peu, car l'on vise le marché Suisse). \\
+ \end{itemize}
+
+Il est donc important de consulter un conseil juridique avant de prendre une décision sur le dépôt d'une publication défensive.
 
 % Module 4 %
 \subsection{Liberté d'exploitation - Titularité}
